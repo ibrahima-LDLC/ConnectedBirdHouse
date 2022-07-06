@@ -24,7 +24,7 @@ Using the command line:
 
 Open the raspi-config tool from the terminal with the command:
 
-$ sudo raspi-config
+sudo raspi-config
 
 Select Interfacing Options then Camera and press Enter. Choose Yes or Ok. Go to Finished you will be prompted to reboot.
 
@@ -42,7 +42,7 @@ Basic raspistill usage:
 
 With a camera module connected and enabled, enter the following command in the terminal to take a picture:
 
-$ raspistill -o cam.jpg
+raspistill -o cam.jpg
 
 Upside down photo:
 
@@ -80,14 +80,14 @@ This script will take a picture and name the file with a timestamp.
 
 You will also need to make sure the path exists by creating a camera folder:
 
-$ mkdir camera
+mkdir camera
 Let's say we saved it as camera.sh, we would first make the file executable:
 
-$ chmod +x camera.sh
+chmod +x camera.sh
 
 Then run with :
 
-$ ./camera.sh
+./camera.sh
 
 More options:
 
@@ -101,7 +101,7 @@ Basic use of raspivid:
 
 With a camera module connected and enabled , record a video using the following command:
 
-$ raspivid -o vid.h264
+raspivid -o vid.h264
 
 Don't forget to use -hfet -vf to return the image if necessary, like with raspistill
 
@@ -111,7 +111,7 @@ Specify the duration of the video:
 
 To specify the duration of the video taken, pass the -tdrapeau with a number of milliseconds. For example:
 
-$ raspivid -o video.h264 -t 10000
+raspivid -o video.h264 -t 10000
 
 This will record 10 seconds of video.
 
@@ -125,7 +125,7 @@ The Raspberry Pi captures video as a raw H 264 video stream. Many media players 
 
 Install MP4Box with this command:
 
-$ sudo apt install -y gpac
+sudo apt install -y gpac
 
 Capture your raw video with raspivid and pack it into an MP4 container like this:
 
