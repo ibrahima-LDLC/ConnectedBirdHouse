@@ -2,9 +2,9 @@
 
 Requirements : 
 
-sudo apt-get install update // enable the update
+# sudo apt-get install update // enable the update
 
-sudo apt-get install upgrade // enable the upgrade
+# sudo apt-get install upgrade // enable the upgrade
 
 First, connect the camera module to the board, please follow the official guide: https://www.raspberrypi.org/documentation/usage/camera/README.md 
 
@@ -24,13 +24,13 @@ Using the command line:
 
 Open the raspi-config tool from the terminal with the command:
 
-sudo raspi-config
+# sudo raspi-config
 
 Select Interfacing Options then Camera and press Enter. Choose Yes or Ok. Go to Finished you will be prompted to reboot.
 
 To test that the system is installed and running, try the following command:
 
-raspistill -v -o test.jpg
+# raspistill -v -o test.jpg
 
 The screen should display a five-second preview of the camera, then take a picture, saved in the test.jpg file, while displaying various informational messages.
 
@@ -42,7 +42,7 @@ Basic raspistill usage:
 
 With a camera module connected and enabled, enter the following command in the terminal to take a picture:
 
-raspistill -o cam.jpg
+# raspistill -o cam.jpg
 
 Upside down photo:
 
@@ -52,7 +52,7 @@ Vertical flip and horizontal flip:
 
 With the camera placed upside down, the image must be rotated 180° to display correctly. The way to correct this is to apply both a vertical and horizontal flip by passing the -vfand :-hf flags
 
-raspistill -vf -hf -o cam2.jpg
+# raspistill -vf -hf -o cam2.jpg
 
 Vertical and horizontal flipped photo
 Now the photo has been captured correctly.
@@ -83,11 +83,11 @@ You will also need to make sure the path exists by creating a camera folder:
 mkdir camera
 Let's say we saved it as camera.sh, we would first make the file executable:
 
-chmod +x camera.sh
+# chmod +x camera.sh
 
 Then run with :
 
-./camera.sh
+# ./camera.sh
 
 More options:
 
@@ -101,7 +101,7 @@ Basic use of raspivid:
 
 With a camera module connected and enabled , record a video using the following command:
 
-raspivid -o vid.h264
+# raspivid -o vid.h264
 
 Don't forget to use -hfet -vf to return the image if necessary, like with raspistill
 
@@ -196,7 +196,7 @@ First solution to activate SSH, your Raspberry Pi has a screen and a keyboard. I
 
 Open a terminal, and type the following command:
 
-sudo raspi-config
+# sudo raspi-config
 
 If you haven't done so, I advise you to start by changing the default password (first line, "Change user password") of the Raspberry Pi since it will now be accessible via SSH.
 
@@ -225,10 +225,10 @@ Note that we have only seen how to activate SSH. To learn how to use it, see our
 
 Usage :
 
-sudo raspistill -t 0 // start the camera module
+# sudo raspistill -t 0 // start the camera module
 
-from picamera import PiCamera
-from time import sleep
+# from picamera import PiCamera
+# from time import sleep
 
 camera = PiCamera()
 
